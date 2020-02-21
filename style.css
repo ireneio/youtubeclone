@@ -44,8 +44,9 @@ button{
     background: hsl(0,0%,98%);
     border: 0;
 }
+
 button:hover{
-    color: #000;
+    color: #706e6e;
     cursor: pointer;
 }
 
@@ -62,7 +63,6 @@ button:hover{
     width: 90%;
     margin: 0 auto;
     margin-top: 2.5em;
-    border: 1px solid pink;
 }
 
 /* colors */
@@ -109,6 +109,11 @@ h3{
     align-items: center;
 }
 
+.signin-btn:hover{
+    opacity: 0.7;
+    color: #028deb;
+}
+
 .signin-btn i{
     font-size: 1.5rem;
     padding-right: 0.3em
@@ -137,10 +142,17 @@ h3{
 }
 
 .btn-outline{
+    display: block;
+    width: 100%;
     color: #028deb;
     border: 1px solid #028deb;
     border-radius: 2%;
     height: 35px;
+}
+
+.btn-outline:hover{
+    opacity: 0.7;
+    color: #028deb;
 }
 
 /* navbar */
@@ -161,15 +173,15 @@ h3{
 }
 
 .left-1{
-    left: 20%;
+    left: 30%;
     top: 1.25em;
     min-width: 100px;
 }
 
 .left-2{  
     width: 80px;
-    left: 60%;
-    top: -0.15em;
+    left: 70%;
+    top: -0.29em;
 }
 
 .right{
@@ -290,22 +302,27 @@ form{
 }
 
 /* main page */
-.container-main{
-    border: 5px solid blue;
+.iframe-container{
+    overflow: hidden;
+    position: relative;
+    padding-top: 56.25%;
 }
-
 iframe{
-    /* width: 100%; */
-    /* min-height: 100%; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
 }
 
 .video-player{
-    border: 1px solid teal;
     width: 100%;
 }
 .video-top{
     border-bottom: 1px solid #e8e6e6;
     height: 5em;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 .video-title{
@@ -314,7 +331,6 @@ iframe{
     flex-direction: column;  
     height: 100%;
     justify-content: space-evenly;
-    border: 1px solid pink;
 }
 
 .video-title-1{
@@ -327,8 +343,7 @@ iframe{
 }
 
 .video-misc ul{
-    display: flex;
-    border: 1px solid pink;
+    display: none;
     justify-content: flex-end;
     height: 100%;
     align-items: flex-end;
@@ -351,7 +366,6 @@ iframe{
     padding-top: 1.2em;
 }
 .video-artistinfo-left{
-    border: 1px solid pink;
     display: grid;
     grid-template-columns: 30fr 1fr;
 }
@@ -392,7 +406,6 @@ iframe{
 
 .autoplay{
     display: flex;
-    border: 1px solid teal;
     width: 120px;
     align-items: center;
     justify-content: space-around;
@@ -440,7 +453,6 @@ iframe{
     padding-top: 1.2em;
     display: flex;
     width: 100%;    
-    border: 1px solid teal;
 }
 
 .comment-header-text{
@@ -457,12 +469,12 @@ iframe{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border: 1px solid teal;
-    height: 40px;
+    height: auto;
 }
 
 .comment-img-box{
     width: 40px;
+    min-width: 40px;
     height: 40px;
 }
 
@@ -475,8 +487,6 @@ iframe{
     background: var(--primary-color);
 }
 .comment-others{
-    /* height: 20%; */
-    padding-bottom: 2em;
     align-items: flex-start;
 }
 
@@ -485,10 +495,9 @@ iframe{
     justify-content: flex-start;
 }
 
-/* .comment-others-name,
-.comment-textarea{
-    max-width: 50%;
-} */
+.comment-input-wrapper{
+    min-width: 70%;
+}
 
 .comment-like button{
     background: var(--primary-color);
@@ -518,6 +527,10 @@ iframe{
     .vid{
         width: 45%;
     }
+}
+
+@media(min-width: 700px){
+    
 }
 
 @media(min-width: 810px){
@@ -636,6 +649,9 @@ iframe{
     .vid-caption,
     .vid-main{
         width: 100%;
+    }
+    .video-misc ul{
+        display: flex;
     }
 }
 
