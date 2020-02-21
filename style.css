@@ -28,6 +28,11 @@ img {
 a {
     color: var(--primary-color);
     text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover{
+    opacity: 0.8;
 }
 
 a:visited{
@@ -155,6 +160,11 @@ form{
     padding: 1rem 0;
 }
 
+#sidebar-collapse li:hover,
+.sidebar-expand-toggle li:hover{
+    background: #e8e6e6;
+}
+
 #sidebar-collapse span{
     display: block;
     font-size: 0.75rem;
@@ -166,6 +176,14 @@ form{
 
 .sidebar-expand-toggle{
     display: none;
+}
+
+.sidebar-toggle{
+    -webkit-transition: left 0.5s ease;
+    -moz-transition: left 0.5s ease;
+    -ms-transition: left 0.5s ease;
+    -o-transition: left 0.5s ease;
+    transition: left 0.5s ease;
 }
 
 /* vid */
