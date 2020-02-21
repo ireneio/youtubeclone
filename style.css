@@ -5,6 +5,8 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
     background-color: hsl(0,0%,98%);
 }
 
@@ -36,6 +38,15 @@ a:hover{
 
 a:visited{
     color: var(--primary-color)
+}
+
+button{
+    background: hsl(0,0%,98%);
+    border: 0;
+}
+button:hover{
+    color: #000;
+    cursor: pointer;
 }
 
 .round-img{
@@ -84,6 +95,10 @@ h3{
     font-size: 0.8rem;
 }
 
+.mini-font{
+    font-size: 0.7rem;
+    font-weight: 400;
+}
 /* button */
 .signin-btn{
     border: 1px solid #028deb;
@@ -275,10 +290,18 @@ form{
 }
 
 /* main page */
+.container-main{
+    border: 5px solid blue;
+}
 
 iframe{
+    /* width: 100%; */
+    /* min-height: 100%; */
+}
+
+.video-player{
+    border: 1px solid teal;
     width: 100%;
-    min-height: 100%;
 }
 .video-top{
     border-bottom: 1px solid #e8e6e6;
@@ -311,6 +334,17 @@ iframe{
     align-items: flex-end;
 }
 
+.video-misc li{
+    padding: 0.7em 0.7em;
+}
+
+.video-misc button{
+    padding: 0.5em;
+    border: 0;
+    font-size: 0.9rem;
+    color: #706e6e;
+}
+
 .video-artistinfo{
     border-bottom: 1px solid #e8e6e6;
     height: 10em;
@@ -338,10 +372,6 @@ iframe{
 
 .video-artistinfo-maindesc{
     padding: 1.4em 0;
-}
-
-.video-artistinfo-subs{
-    font-size: 0.7rem;
 }
 
 .video-artistinfo-right{
@@ -406,7 +436,65 @@ iframe{
     padding-top: 1.2em;
 }
 
+.comment-header{
+    padding-top: 1.2em;
+    display: flex;
+    width: 100%;    
+    border: 1px solid teal;
+}
 
+.comment-header-text{
+    font-size: 1em;
+}
+
+.comment-sort{
+    margin-left: 1.5rem;
+}
+
+.comment-user,
+.comment-others{
+    padding-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid teal;
+    height: 40px;
+}
+
+.comment-img-box{
+    width: 40px;
+    height: 40px;
+}
+
+.comment-input{
+    padding-left: 1.2em;
+}
+
+.comment-input-box{
+    border: 0;   
+    background: var(--primary-color);
+}
+.comment-others{
+    /* height: 20%; */
+    padding-bottom: 2em;
+    align-items: flex-start;
+}
+
+.comment-others-name{
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* .comment-others-name,
+.comment-textarea{
+    max-width: 50%;
+} */
+
+.comment-like button{
+    background: var(--primary-color);
+    border: 0;
+    padding: 1em 1em 0 0;
+}
 
 /* utils */
 
@@ -505,8 +593,21 @@ iframe{
     .wrapper-main{
         display: grid;
         grid-template-areas: "main side"
-                            "comment .";
+                            "comment side"
+                            "comment side";
         grid-gap: 1em;
+    }
+
+    .container-main{
+        grid-area: "main";
+    }
+
+    .contianer-side{
+        grid-area: "side";
+    }
+
+    .comment{
+        grid-area: "comment";
     }
 
     iframe{
