@@ -18,8 +18,7 @@ ul{
 }
 
 img {
-    width: 100%;
-    
+    width: 100%;   
     max-width: 100%;
     max-height: 200px;
     display: block;
@@ -52,6 +51,20 @@ a:visited{
     width: 90%;
     margin: 0 auto;
     margin-top: 2.5em;
+    border: 1px solid pink;
+}
+
+/* colors */
+.light{
+    color:#d6d4d4;
+}
+
+.medium{
+    color: #706e6e;
+}
+
+.dark{
+    color: #4f4e4d;
 }
 
 /* typography */
@@ -99,6 +112,22 @@ h3{
     background: #d6d4d4;
 }
 
+.sub-btn{
+    background: red;
+    color: #fff;
+    border: 1px solid red;
+    border-radius: 2%;
+    padding: 0.7em 1.2em;
+    text-transform: uppercase;
+}
+
+.btn-outline{
+    color: #028deb;
+    border: 1px solid #028deb;
+    border-radius: 2%;
+    height: 35px;
+}
+
 /* navbar */
 .navbar{
     background: #fff;
@@ -109,12 +138,6 @@ h3{
 
 .left{
     float:left;
-    /* display: flex;
-    border: 1px solid pink;
-    height: 3.5em;
-    min-width: 300px;
-    justify-content: space-between;
-    align-items: center; */
 }
 
 .left-1,
@@ -123,7 +146,6 @@ h3{
 }
 
 .left-1{
-    /* color: #a9a9a9; */
     left: 20%;
     top: 1.25em;
     min-width: 100px;
@@ -153,7 +175,6 @@ form{
     color: #706e6e;
     width: 72px;
     height: 100%;
-    /* position: fixed; */
 }
 
 #sidebar-collapse li{
@@ -206,8 +227,6 @@ form{
 }
 
 .vid-img{
-    /* height: 100% */
-    /* max-width: 100%; */
     height: 70%;
 }
 
@@ -254,6 +273,142 @@ form{
     color: #706e6e;
     font-size: 0.9rem;
 }
+
+/* main page */
+
+iframe{
+    width: 100%;
+    min-height: 100%;
+}
+.video-top{
+    border-bottom: 1px solid #e8e6e6;
+    height: 5em;
+}
+
+.video-title{
+    float:left;
+    display: flex;
+    flex-direction: column;  
+    height: 100%;
+    justify-content: space-evenly;
+    border: 1px solid pink;
+}
+
+.video-title-1{
+    padding: 0;
+    margin: 0;
+}
+
+.video-misc{
+    height: 100%;
+}
+
+.video-misc ul{
+    display: flex;
+    border: 1px solid pink;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: flex-end;
+}
+
+.video-artistinfo{
+    border-bottom: 1px solid #e8e6e6;
+    height: 10em;
+    padding-top: 1.2em;
+}
+.video-artistinfo-left{
+    border: 1px solid pink;
+    display: grid;
+    grid-template-columns: 30fr 1fr;
+}
+
+.video-artistinfo-artist{
+    display: flex;
+}
+
+.video-artistinfo-img{
+    width: 50px;
+    height: 50px;
+}
+
+.video-artistinfo-words{
+    padding: 0.6em 0.8em;
+    line-height: 1.5;
+}
+
+.video-artistinfo-maindesc{
+    padding: 1.4em 0;
+}
+
+.video-artistinfo-subs{
+    font-size: 0.7rem;
+}
+
+.video-artistinfo-right{
+    float: right;
+    position: relative;
+    top: 1em;
+    right: 1em;
+}
+
+.video-desc{
+    padding-bottom: 1.2em;
+}
+
+.upnext{
+    border-bottom: 1px solid #e8e6e6;
+    height: 150px;
+}
+
+.autoplay{
+    display: flex;
+    border: 1px solid teal;
+    width: 120px;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 0.7rem;
+}
+
+.fa-toggle-on{
+    color: #028deb;
+}
+
+.video-card-whole{
+    display: flex;
+    height: 100px;
+}
+
+.video-card-top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1em;
+}
+
+.video-card-player{
+    width: 164px;
+    
+}
+
+.video-card-time{
+    position: relative;
+}
+
+.video-card-info{
+    line-height: 1.5;
+    margin-left: 10px;
+}
+
+.video-card-info p{
+    font-size: 0.7rem;
+}
+
+.allvideos{
+    padding-top: 1.2em;
+}
+
+
+
+/* utils */
 
 @media(min-width: 518px){
     .container{
@@ -342,6 +497,24 @@ form{
     .vid-caption,
     .vid-main{
         width: 100%;
+    }
+}
+
+@media(min-width: 1017px){
+    /* main page */
+    .wrapper-main{
+        display: grid;
+        grid-template-areas: "main side"
+                            "comment .";
+        grid-gap: 1em;
+    }
+
+    iframe{
+        width: 97%;
+    }
+
+    .upnext{
+        width: 410px;
     }
 }
 
