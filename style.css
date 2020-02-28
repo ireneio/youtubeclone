@@ -386,6 +386,9 @@ iframe{
 
 .video-artistinfo-maindesc{
     padding: 1.4em 0;
+    max-height: 26px;
+    overflow: hidden;
+    
 }
 
 .video-artistinfo-right{
